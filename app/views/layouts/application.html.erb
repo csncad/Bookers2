@@ -12,6 +12,8 @@
 
   <body>
     <header>
+      <a href="=https://eecefa233dd34e808ce4a8811998c311.vfs.cloud9.ap-northeast-1.amazonaws.com"Bookers></a>
+      
     <% if user_signed_in? %>
       <li>
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
@@ -27,4 +29,5 @@
   </header>
     <%= yield %>
   </body>
+  <footer>CopyRight Infratop.inc</footer>
 </html>

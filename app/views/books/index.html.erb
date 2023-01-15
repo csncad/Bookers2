@@ -1,0 +1,32 @@
+<h1>User info</h1>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>introduction</th>
+      </tr>
+    </thead>
+  </table>
+</body>
+<h2>New Book</h2>
+<%= form_with model: List.new do |f| %>
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>errors prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  
+  <%= f.text_field :Title %>
+  
+  <%= f.text_area :Opinion %>
+
+  <%= f.submit 'Create Book' %>
+<% end %>
+<h2>Books</h2>
+  <tr>
+    <td><%= book.title %></td>
+    <td><%= book.opinion %></td>   
+  </tr>
